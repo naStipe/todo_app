@@ -1,0 +1,14 @@
+.khaki {
+    color: #B9A394;
+}
+.silver {
+    color: #D4C5C7;
+}
+.magenta {
+    color: #914D76;
+}
+
+.text-outline {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+}
