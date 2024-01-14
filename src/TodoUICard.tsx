@@ -9,10 +9,17 @@ function TodoUICard () {
 
     const addTasks = () => {
         if(task !== ""){
-            setTasks([...tasks, task])
+            setTasks([...tasks, task]);
             setTask("");
-            console.log(tasks)
+            console.log(tasks);
         }
+    }
+
+    const deleteTask = (index:number) => {
+        const updatedList = [...tasks];
+        console.log('Deleting a task');
+        updatedList.splice(index, 1);
+        setTasks(updatedList);
     }
 
     return (
@@ -36,9 +43,9 @@ function TodoUICard () {
                         <ul>
                             {
                                 tasks.map((task,index) => (
-                                    <div>
-                                        <li>{task}</li>
-                                        <button>Delete</button>
+                                    <div className="bg-gray-200 bg-opacity-95 w-11/12 rounded-md p-2 m-4" key={index}>
+                                        <li className="p-2 w-11/12 items-center m-auto">{task}</li>
+                                        <button onClick={() => {deleteTask(index)}} className="bg-red-500 text-white p-2 rounded-md font-semibold hover:bg-red-600">Delete</button>
                                     </div>
                                 ))
                             }
@@ -54,4 +61,4 @@ function TodoUICard () {
     )
 }
 
-export default TodoUICard
+export default TodoUICard;
