@@ -44,7 +44,7 @@ function TodoUICard () {
                             {
                                 tasks.map((task,index) => (
                                     <div className="bg-gray-200 bg-opacity-95 w-11/12 rounded-md p-2 m-4" key={index}>
-                                        <li className="p-2 w-11/12 items-center m-auto">{task}</li>
+                                        <li className="p-2 w-11/12 items-center m-auto"><p className="break-words">{task}</p></li>
                                         <button onClick={() => {deleteTask(index)}} className="bg-red-500 text-white p-2 rounded-md font-semibold hover:bg-red-600">Delete</button>
                                     </div>
                                 ))
